@@ -9,7 +9,7 @@ import pandas as pd
 
 
 # book = pd.read_excel('./../file/test.xlsx')
-filename= 'C:/國家教育研究院學生學習成就資料釋出資料/國家教育研究院學生學習成就資料釋出資料/臺灣學生學習成就評量資料/2009/數學科選擇題試題作答反應/小四/2009_小四_數學科_原始資料檔.xls'
+filename= './../file/test.xlsx'
 xl = pd.ExcelFile(filename)
 
 
@@ -110,7 +110,7 @@ import pandas as pd
 
 
 # book = pd.read_excel('./../file/test.xlsx')
-reference_table =pd.read_excel('C:/國家教育研究院學生學習成就資料釋出資料/國家教育研究院學生學習成就資料釋出資料/臺灣學生學習成就評量資料/2009/數學科選擇題試題作答反應/小四/2009_小四_數學科_試題區塊對照表(改).xls',sheet_name='04試題區塊對照表')
+reference_table =pd.read_excel('./../file/test.xlsx')
 
 
 # In[15]:
@@ -296,7 +296,7 @@ new_df.describe()
 # In[34]:
 
 
-test_group_table = pd.read_excel("C:/國家教育研究院學生學習成就資料釋出資料/國家教育研究院學生學習成就資料釋出資料/臺灣學生學習成就評量資料/2009/數學科選擇題試題作答反應/小四/2009_小四_數學科_試題指標與區塊對照(整).xlsx")
+test_group_table = pd.read_excel("./../file/test.xlsx")
 stu_c_data = pd.merge(new_df, test_group_table,  on='試題區塊')
 
 
@@ -478,7 +478,7 @@ stu_test
 
 #### UTF-8-Sig和UTF-8的主要差別是前者是UTF-8 with BOM (Byte Order Mark)，在Win10中翻譯成「具有BOM的UTF-8」，後者沒有BOM，總之有BOM的比較好。
 
-stu_test.to_csv('C:/國家教育研究院學生學習成就資料釋出資料/國家教育研究院學生學習成就資料釋出資料/臺灣學生學習成就評量資料/2009/數學科選擇題試題作答反應/小四/data.csv',encoding='utf-8-sig'  )
+stu_test.to_csv('./../file/test.csv'  )
 
 
 # In[ ]:
